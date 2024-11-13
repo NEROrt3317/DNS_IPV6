@@ -15,7 +15,7 @@ sudo yum install bind bind-utils
 
 - Zona de Reverse DNS para IPv6: Si también necesitas realizar consultas reverse (PTR) para direcciones IPv6, deberás agregar la zona reverse correspondiente (con el prefijo ip6.arpa).
 
-1. Configuración del archivo `/etc/named.conf con soporte IPv6`.
+1. Configuración del archivo `/etc/named.conf` con soporte IPv6.
 
 ```
 options {
@@ -92,7 +92,7 @@ Se añadió una zona reverse para las direcciones IPv6. Las direcciones IPv6 rev
 
 Archivos de zona para IPv6:
 Asegúrate de agregar los registros AAAA en el archivo de zona correspondiente (db.grupo1.local o el archivo que estés usando para tus configuraciones directas).
-2.	Editar el archivo de la zona que se referenció en el archivo anterior `sudo nano /var/named/db.grupo1.local`:
+2.	Editar o crear el archivo de la zona que se referenció en el archivo anterior `sudo nano /var/named/db.grupo1.local`:
 ```
 $TTL 86400
 @   IN  SOA     ns1.grupo1.local. root.grupo1.local. (
