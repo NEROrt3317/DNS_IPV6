@@ -153,3 +153,18 @@ Los registros PTR como 1 IN PTR ns1.grupo1.local. están invirtiendo la direcci�
 Configuración de las direcciones AAAA:
 
 Los registros AAAA son para resolver las direcciones IPv6 de los hosts, y en este caso hemos agregado registros AAAA tanto para ns1 como para client, con sus respectivas direcciones IPv6.
+4. Cambiar permisos, inicializar y activar el servicio
+```
+sudo chgrp named -R /var/named
+sudo chown -v root:named /etc/named.conf
+sudo systemctl enable named
+sudo systemctl start named
+```
+
+5. validar con dig
+```
+dig @192.168.200.1 ns1.grupo1.local
+dig @192.168.200.1 client.grupo1.local
+dig @localhost grupo1.local AAAA
+```
+
