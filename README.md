@@ -1,6 +1,13 @@
 # DNS_IPV6
 Implementar un servidor dns con ipv4 &amp; ipv6
-
+## Actualizar el sistema: 
+```
+sudo yum update
+```
+## Instalar y activar el servicio DNS: 
+```
+sudo yum install bind bind-utils
+```
 # Modificaciones para IPv6
 - Agregar direcciones de escucha para IPv6: Debes especificar que el servidor DNS escuche también en direcciones IPv6 (en el puerto 53). Para esto, puedes agregar la dirección ::1 (localhost en IPv6) y también la dirección IPv6 de tu red, si la tienes asignada. Si no tienes una dirección IPv6 específica, puedes usar :: para escuchar en todas las interfaces IPv6 disponibles.
 
