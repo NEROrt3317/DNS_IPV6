@@ -160,8 +160,11 @@ sudo chown -v root:named /etc/named.conf
 sudo systemctl enable named
 sudo systemctl start named
 ```
-
-5. validar con dig
+5. configuracion personal
+```
+sudo systemctl status named   
+```
+6. validar con dig
 ```
 dig @192.168.200.1 ns1.grupo1.local
 dig @192.168.200.1 client.grupo1.local
